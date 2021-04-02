@@ -9,55 +9,60 @@
 </head>
 
 <body>
-    <h1>Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать
-        оператор return.</h1>
+    <h1>Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch организовать вывод чисел от a
+        до 15.</h1>
 
     <script>
-        /**
-     * Функция суммы.
-     * @param {number} a Первый параметр
-     * @param {number} b Второй параметр
-     * @returns {number|*} Возвращает число, если было передано два числа.
-     */
-        function sum(a, b) {
-            return a + b;
+        a = +prompt('Введите число от 1 до 15');
+        switch (a) {
+            case 1:
+                console.log('Ваше число 1');
+                break;
+            case 2:
+                console.log('Ваше число 2');
+                break;
+            case 3:
+                console.log('Ваше число 3');
+                break;
+            case 4:
+                console.log('Ваше число 4');
+                break;
+            case 5:
+                console.log('Ваше число 5');
+                break;
+            case 6:
+                console.log('Ваше число 6');
+                break;
+            case 7:
+                console.log('Ваше число 7');
+                break;
+            case 8:
+                console.log('Ваше число 8');
+                break;
+            case 9:
+                console.log('Ваше число 9');
+                break;
+            case 10:
+                alert('Ваше число 10');
+                break;
+            case 11:
+                console.log('Ваше число 11');
+                break;
+            case 12:
+                console.log('Ваше число 12');
+                break;
+            case 13:
+                console.log('Ваше число 13');
+                break;
+            case 14:
+                console.log('Ваше число 14');
+                break;
+            case 15:
+                console.log('Ваше число 15');
+                break;
         }
+        </script>
 
-        /**
-         * Функция вычитания.
-         * @param {number} a Первый параметр
-         * @param {number} b Второй параметр
-         * @returns {number} Число, получившееся при вычете из параметра a параметр b.
-         */
-        function deduction(a, b) {
-            return a - b;
-        }
-
-        /**
-         * Функция деления.
-         * @param {number} a Первый параметр
-         * @param {number} b Второй параметр
-         * @returns {number} Число, получившееся при делении параметра a на параметр b.
-         */
-        function division(a, b) {
-            return a / b;
-        }
-
-        /**
-         * Функция умножения.
-         * @param {number} a Первый параметр
-         * @param {number} b Второй параметр
-         * @returns {number} Число, получившееся при умножении параметра a на параметр b.
-         */
-        function multiply(a, b) {
-            return a * b;
-        }
-
-        console.log(sum(8, 7)); // 15
-        console.log(deduction(5, 3)); // 2
-        console.log(division(14, 2)); // 7
-        console.log(multiply(42, 2)); // 84
-    </script>
 </body>
 
 </html>
