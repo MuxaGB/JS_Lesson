@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 –
+        значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции
+        выполнить одну из арифметических операций (использовать функции из пункта 3) и вернуть полученное значение
+        (использовать switch).</h1>
+
+    <script>
+        /**
+     * Функция суммы.
+     * @param {number} a Первый параметр
+     * @param {number} b Второй параметр
+     * @returns {number|*} Возвращает число, если было передано два числа.
+     */
+        function sum(a, b) {
+            return a + b;
+        }
+
+        /**
+         * Функция вычитания.
+         * @param {number} a Первый параметр
+         * @param {number} b Второй параметр
+         * @returns {number} Число, получившееся при вычете из параметра a параметр b.
+         */
+        function deduction(a, b) {
+            return a - b;
+        }
+
+        /**
+         * Функция деления.
+         * @param {number} a Первый параметр
+         * @param {number} b Второй параметр
+         * @returns {number} Число, получившееся при делении параметра a на параметр b.
+         */
+        function division(a, b) {
+            return a / b;
+        }
+
+        /**
+         * Функция умножения.
+         * @param {number} a Первый параметр
+         * @param {number} b Второй параметр
+         * @returns {number} Число, получившееся при умножении параметра a на параметр b.
+         */
+        function multiply(a, b) {
+            return a * b;
+        }
+
+        /**
+           * Функция вызывает одну из арифметических операций.
+           * @param {number} arg1 Первый аргумент
+           * @param {number} arg2 Второй аргумент
+           * @param {string} operation Операция, которую необходимо выполнить.
+           * @returns {number|*} Значение, которое вернет функция выбранной операции.
+           */
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case 'sum':
+                    return sum(arg1, arg2);
+                case 'deduction':
+                    return deduction(arg1, arg2);
+                case 'division':
+                    return division(arg1, arg2);
+                case 'multiply':
+                    return multiply(arg1, arg2);
+            }
+        }
+
+        console.log(mathOperation(8, 7, 'sum')); // 15
+        console.log(mathOperation(5, 3, 'deduction')); // 2
+        console.log(mathOperation(14, 2, 'division')); // 7
+        console.log(mathOperation(42, 2, 'multiply')); // 84
+    </script>
+</body>
+
+</html>
