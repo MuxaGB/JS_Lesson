@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const basketItems = ['Базилик', 'Помидоры', 'Кофеварка', 'Телевизор'];
+        const ItemsCost = [['Помидоры', 100], ['Базилик', 50], ['Телевизор', 500], ['Кофеварка', 250]];
+
+        const getItemPrice = (item, array) => {
+            const items = [];
+            const costs = [];
+            for (let i = 0; i < array.length; i++) {
+                items.push(array[i][0]);
+                costs.push(array[i][1]);
+            }
+            return costs[items.indexOf(item)];
+        };
+
+        const countBasketPrice = (basketArr, costArr) => {
+            let totalCost = 0;
+            for (let i = 0; i < basketArr.length; i++) {
+                totalCost += getItemPrice(basketArr[i], costArr);
+            }
+            return totalCost;
+        };
+        console.log('Массив корзины: ' + basketItems);
+        console.log('Массив стоимости каждого товара: ' + ItemsCost);
+        console.log('Вывод полной стоимости корзины: ' + countBasketPrice(basketItems, ItemsCost));
+    </script>
+</body>
+
+</html>
